@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvResultTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your BMI Result"
+                android:textColor="#333333"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:paddingBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvBmiValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23.4"
+                android:textColor="#00796B"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvBmiCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal Weight"
+                android:textColor="#555555"
+                android:textSize="18sp"
+                android:paddingBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnRecalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recalculate BMI"
+                android:textAllCaps="false"
+                android:backgroundTint="#00796B"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

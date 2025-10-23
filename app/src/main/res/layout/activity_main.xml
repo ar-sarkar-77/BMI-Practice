@@ -5,89 +5,101 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:background="#F4F4F4"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="20dp"
-    >
+    tools:context=".MainActivity">
 
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="25dp"
-            android:hint="Name.."
-            android:inputType="text"
-            android:layout_gravity="center"
-            />
-
-
-
-    <EditText
-        android:id="@+id/weight"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="25dp"
-        android:hint="Weight (KG).."
-        android:inputType="numberDecimal"
-        android:layout_marginTop="10dp"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_marginTop="10dp"
-        >
-
-        <EditText
-            android:id="@+id/feet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="25dp"
-            android:hint="Feet.."
-            android:inputType="numberDecimal"
-            android:layout_weight="1"
-            android:layout_marginRight="2dp"
-            />
-
-
-        <EditText
-            android:id="@+id/inch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="25dp"
-            android:hint="Inch.."
-            android:inputType="numberDecimal"
-            android:layout_weight="1"
-            android:layout_marginLeft="2dp"
-            />
-
-    </LinearLayout>
-
-
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Calculate"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        />
+        android:layout_margin="8dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#FFFFFF">
 
-    <TextView
-        android:id="@+id/TvResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="25dp"
-        android:layout_marginTop="20dp"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMI Calculator"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:hint="Name.."
+                android:inputType="textPersonName"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:hint="Weight (KG).."
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/feet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:hint="Feet.."
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"/>
+
+                <EditText
+                    android:id="@+id/inch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:hint="Inch.."
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Calculate"
+                android:textAllCaps="false"
+                android:backgroundTint="#00796B"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
